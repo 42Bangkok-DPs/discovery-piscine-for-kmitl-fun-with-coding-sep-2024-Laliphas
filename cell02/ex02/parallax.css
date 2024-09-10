@@ -1,0 +1,48 @@
+body{
+    height: 100%;
+    font-family: monospace;
+    margin: 0;
+    text-align: center;
+}
+p{
+    background-color: black;
+    padding: 5px;
+    position: absolute;
+    border-radius: 5px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: large;
+    text-shadow: 2px 2px 4px rgba(o,0,0,0.7);
+}
+
+.para{
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.parallax1{
+    background-image: url(https://images.saymedia-content.com/.image/t_share/MTk2NzY3MjA5ODc0MjY5ODI2/top-10-cutest-cat-photos-of-all-time.jpg);
+}
+
+.parallax2{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgQZsLeDJcyOkhxr6ePwiBTla8YgljqFrIIw&s);
+}
+
+.box1{
+    background-color: black;
+    color: white;
+    height: 50vh;
+    text-align: center;
+    padding: 50px;
+
+}
+h3{
+    padding: 50vb;
+    justify-items: center;
+}
