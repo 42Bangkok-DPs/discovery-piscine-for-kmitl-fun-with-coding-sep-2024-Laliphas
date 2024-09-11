@@ -87,16 +87,52 @@
         </div>
     </div>
     <script>
+         function isPosi(value) {
+                const num = Number(value);
+                return Number.isInteger(num) && num >= 0;
+        }
         function calculate(){
             const num1 = document.getElementById("num1").value;
             const num2 = document.getElementById("num2").value;
             const ope = document.getElementById("operator").value;
 
-            if(num1 < 0 || num2 < 0){
+            if (!isPosi(num1) || !isPosi(num2)) {
                 alert('Error :(');
                 console.log('Error :(');
                 return;
             }
+
+            const n1 = parseInt(num1);
+            const n2 = parseInt(num2);
+
+            if ((ope === '/' || ope === '%') && n2 === 0) {
+                alert("It's over 9000!");
+                console.log("It's over 9000!");
+                return;
+            }
+
+            let result;
+            if(ope === '+'){
+                result = n1 + n2;
+            }
+            else if(ope === '-'){
+                result = n1-n2;
+            }
+            else if(ope === '*'){
+                result = n1*n2;
+            }
+            else if(ope === '/'){
+                result = n1/n2;
+            }
+            else if(ope === '%'){
+                result = n1%n2;
+            }
+
+            alert(result);
+            console.log(result);
+            setInterval(() =>{
+                alert("Please, use me...");
+            }, 30000);
         }
     </script>
 </body>
