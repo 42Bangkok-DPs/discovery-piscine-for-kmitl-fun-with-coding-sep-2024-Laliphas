@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex00</title>
+    <link rel="stylesheet" href="backgroound.css">
+</head>
+<body>
+    <div>
+        <button id="colorBTN">Click Me</button>
+    </div>
+    <script>
+        const button = document.getElementById('colorBTN');
+
+        function getColor(){
+            const letter = '0123456789ABCDEF';
+            let col = '#';
+            for (let i = 0; i < 6; i++){
+                col += letter[Math.floor(Math.random()*16)]
+            }
+            return col;   
+        }
+        button.addEventListener("click",function(){
+            document.body.style.backgroundColor = getColor();
+        });
+    </script>
+    
+</body>
+</html>
