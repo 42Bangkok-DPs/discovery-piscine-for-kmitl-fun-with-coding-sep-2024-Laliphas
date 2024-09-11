@@ -6,12 +6,49 @@
     <title>ex01</title>
 </head>
 <style>
-
+    .bln{
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        border-radius: 50%;
+        transition: width 0.3s, height 0.3s, background-color 0.3s;
+        cursor: pointer; 
+    }
 </style>
 <body>
-    <div id="bln"></div>
+    <div id="bln" class="bln"></div>
     <script>
+        const ball = document.getElementById("bln");
+        let size = 200
+        const maxs = 420;
+        let colIn = 0;
+        const col = ['red','green','blue']
+
+        function update() {
+            ball.style.width = `${size}px`;
+            ball.style.height = `${size}px`;
+            ball.style.backgroundColor = col[colIn];
+        }
         
+        ball.addEventListener("click", () =>{
+            size +=10
+            if(size > maxs){
+                size = 200;
+                colIn = 0;
+                ball.style.backgroundColor = col[colIn];
+            }
+            else{
+                colIn = (colIn + 1) % col.length
+            }
+            update();
+        });
+
+        ball.addEventListener("mouseleave",() =>{
+            size = Math.max(size - 5, 200);
+            colIn = (colIn - 1 + col.length) % col.length
+            update();
+        });
+
     </script>
 </body>
 </html>

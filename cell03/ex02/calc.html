@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex02</title>
+</head>
+<style>
+    body{
+        background-color: #97b3cb;
+        margin: 10%;
+        padding: 0;
+        height: 100vh;
+        font-family: monospace;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        display: flex;
+
+    }
+    h1{
+        color: black;
+        text-align: center; 
+        font-size: 30px;
+    }
+    .box{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px;
+    }
+
+    .box > div {
+            margin: 10px;
+    }
+
+    input, select {
+        border-radius: 5px;
+        border: none;
+        padding: 5px;
+        margin-top: 5px;
+        font-size: 25 px;
+        width: 200px;
+    }
+    select{
+        width: 50px;
+    }
+    .btn{
+        width: 75px;
+        cursor: pointer;
+        background-color: #2f4252;
+        color: #ddd;
+    }
+    .btn:hover{
+        background-color: #516b83;
+
+    }
+    
+</style>
+<body>
+    <h1>Calculator</h1>
+    <div class="box">
+        <div>
+            <label>Input Number #1:</label><br>
+            <input type="text" id="num1">
+        </div>
+
+        <div>
+            <br>
+            <select id="operator">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+                <option value="%">%</option>
+            </select>
+        </div>
+
+        <div>
+            <label>Input Number #2:</label><br>
+            <input type="text" id="num2">
+        </div>
+
+        <div>
+            <br>
+            <input type="submit" value="Try Me!" onclick="calculate()" class="btn">
+        </div>
+    </div>
+    <script>
+        function calculate(){
+            const num1 = document.getElementById("num1").value;
+            const num2 = document.getElementById("num2").value;
+            const ope = document.getElementById("operator").value;
+
+            if(num1 < 0 || num2 < 0){
+                alert('Error :(');
+                console.log('Error :(');
+                return;
+            }
+        }
+    </script>
+</body>
+</html>
