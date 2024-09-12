@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
         removeButton.textContent = 'X';
         removeButton.className = 'removeBTN';
         removeButton.addEventListener('click', (event) => {
-            event.stopPropagation(); // Prevent triggering div's click event
+            event.stopPropagation();
             if (confirm('Do you want to remove this to-do?')) {
                 div.remove();
                 saveTodos();
