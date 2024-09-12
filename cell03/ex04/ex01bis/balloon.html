@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex01</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<style>
+    .bln{
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        border-radius: 50%;
+        transition: width 0.3s, height 0.3s, background-color 0.3s;
+        cursor: pointer; 
+    }
+</style>
+<body>
+    <div id="bln" class="bln"></div>
+    <script>
+        
+        $(document).ready(function() {
+            let size = 200
+            const maxs = 420;
+            let colIn = 0;
+            const col = ['red','green','blue']
+
+            function update(){
+                $('#bln').css({
+                    'width': `${size}px`,
+                    'height' : `${size}px`,
+                    'background-color' : col[colIn]
+                });
+            }
+
+            $('#bln').on('click',function() {
+                size +=10;
+                if(size > maxs){
+                    size = 200;
+                    colIn = 0;
+                }
+                else{
+                    colIn = (colIn + 1) % col.length
+                }
+                update();
+            });
+            
+            
+            $('#bln').on('mouseleave',function() {
+                size = Math.max(size - 5, 200);
+                colIn = (colIn - 1 + col.length) % col.length;
+                update();
+            });
+        });
+            
+    </script>
+</body>
+</html>
