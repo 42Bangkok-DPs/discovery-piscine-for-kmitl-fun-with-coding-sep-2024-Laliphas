@@ -37,9 +37,10 @@ document.addEventListener('DOMContentLoaded', () => {
     
 
     function saveTodos() {
-        const todos = Array.from(ftList.children).map(todo => todo.textContent);
+        const todos = Array.from(ftList.children).map(todo => todo.querySelector('span').textContent);
         document.cookie = `todos=${encodeURIComponent(JSON.stringify(todos))}; path=/;`;
     }
+    
 
     function load() {
         const cookies = document.cookie.split('; ');
