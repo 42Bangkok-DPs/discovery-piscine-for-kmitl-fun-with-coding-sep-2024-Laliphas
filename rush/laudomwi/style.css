@@ -140,7 +140,11 @@ body {
     line-height: 1.5;
 }
 
-/* Responsive Design */
+.main-topic, .main-content section {
+    overflow-wrap: break-word; 
+    hyphens: auto; 
+}
+
 @media (max-width: 768px) {
     .navbar {
         width: 100%;
@@ -163,29 +167,21 @@ body {
         padding: 20px;
     }
 
-    .main-topic {
-        width: 90%;
-        margin: 0 auto 20px;
+    .main-topic, .main-content {
+        padding: 15px; 
     }
 
-    .main-topic h1 {
-        font-size: 28px;
+    .main-topic h1, .main-content section h1 {
+        font-size: 24px; 
     }
 
-    .main-topic p {
-        font-size: 16px;
+    .main-topic p, .main-content section p {
+        font-size: 16px; 
     }
 
-    .main-content {
-        padding: 20px;
-    }
-
-    .main-content section h1 {
-        font-size: 24px;
-    }
-
-    .main-content section p {
-        font-size: 16px;
+    .main-topic, .main-content section {
+        max-width: 100%; 
+        min-width: 0; 
     }
 }
 
@@ -210,28 +206,20 @@ body {
         padding: 10px;
     }
 
-    .main-topic {
-        width: 100%;
-        padding: 15px;
-    }
-
-    .main-topic h1 {
-        font-size: 24px;
-    }
-
-    .main-topic p {
-        font-size: 14px;
-    }
-
-    .main-content {
+    .main-topic, .main-content {
         padding: 10px;
     }
 
-    .main-content section h1 {
-        font-size: 18px;
+    .main-topic h1, .main-content section h1 {
+        font-size: 20px;
     }
 
-    .main-content section p {
+    .main-topic p, .main-content section p {
         font-size: 14px;
+    }
+
+    .main-topic, .main-content section {
+        max-width: 100%;
+        min-width: 0;
     }
 }
