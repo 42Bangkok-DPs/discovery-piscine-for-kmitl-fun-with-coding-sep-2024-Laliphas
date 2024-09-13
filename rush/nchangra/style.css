@@ -61,7 +61,7 @@ body {
     width: 100%;
     padding: 30px;
     display: flex;
-    flex-direction: column; /* Stack the main-topic and main-content vertically */
+    flex-direction: column;
 }
 
 .main-topic {
