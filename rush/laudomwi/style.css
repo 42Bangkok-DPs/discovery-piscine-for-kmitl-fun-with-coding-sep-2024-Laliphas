@@ -71,7 +71,23 @@ body {
     width: 100%;
     padding: 30px;
     display: flex;
-    flex-direction: column; /* Stack the main-topic and main-content vertically */
+    flex-direction: column; 
+}
+
+.social-icons {
+    margin: 15px 0;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover{
+    transform: translateY(-5px);
 }
 
 .main-topic {
